@@ -1,0 +1,55 @@
+{
+  "illustrative_only": true,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "duration_frames": 240,
+  "music": {
+    "status": "temporary_guide",
+    "selected_recording_present": false,
+    "tempo_bpm": null,
+    "recording_offset_seconds": null
+  },
+  "scenes": [
+    {
+      "id": "scene-arrival",
+      "source_id": "example-video-a",
+      "kind": "video",
+      "source_in_seconds": 1.0,
+      "timeline_start_frame": 0,
+      "duration_frames": 90,
+      "playback_rate": 1.0,
+      "intent": "Establish arrival",
+      "source_audio": {"use": false, "reason": "Unsuitable background sound"}
+    },
+    {
+      "id": "scene-detail",
+      "source_id": "example-video-b",
+      "kind": "video",
+      "source_in_seconds": 2.0,
+      "timeline_start_frame": 90,
+      "duration_frames": 90,
+      "playback_rate": 1.0,
+      "intent": "A quiet natural detail",
+      "source_audio": {
+        "use": true,
+        "source_in_seconds": 2.0,
+        "source_out_seconds": 5.0,
+        "timeline_start_frame": 90,
+        "duration_frames": 90,
+        "fade_in_seconds": 0.2,
+        "fade_out_seconds": 0.25,
+        "listening_status": "unverified_example"
+      }
+    },
+    {
+      "id": "scene-ending",
+      "source_id": "example-photo-a",
+      "kind": "photograph",
+      "timeline_start_frame": 180,
+      "duration_frames": 60,
+      "intent": "Resolve the memory",
+      "source_audio": {"use": false}
+    }
+  ]
+}
