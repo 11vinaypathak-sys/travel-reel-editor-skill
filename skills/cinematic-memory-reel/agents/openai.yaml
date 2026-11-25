@@ -1,4 +1,4 @@
 interface:
-  display_name: "Cinematic Memory Reel"
-  short_description: "Shape travel footage into a cinematic memory reel"
-  default_prompt: "Use $cinematic-memory-reel to edit my footage into a cinematic memory reel with coherent colour, restrained motion and clip-matched sound."
+  display_name: "Travel Reel Editor"
+  short_description: "Turn travel videos and photos into cinematic Reels"
+  default_prompt: "Use $cinematic-memory-reel to edit my trip videos and photos into a short cinematic Reel, with a clear story, music and a preview before the full export."

@@ -1,3 +1,5 @@
+# Travel Reel Editor — copy-paste prompt
+
 Help me turn my travel videos and photographs into a cinematic memory film.
 
 First state what you can actually do here: inspect uploads, edit files, use an editor, render video, or only advise. Never claim to have watched, listened to, edited or verified inaccessible material.

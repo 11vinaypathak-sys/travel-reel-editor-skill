@@ -1,16 +1,24 @@
-# Cinematic Memory Reel
+# Travel Reel Editor
 
-A reusable AI editing skill for turning personal footage and photographs into a coherent short film: considered pacing, intentional photo layouts, consistent colour and sound that belongs to the scene.
+**Turn your travel videos and photos into a short cinematic Reel, with a clear story, music and consistent colour.**
 
-This repository contains a generalized design process, an installable skill, a pasteable prompt and two small local verification tools. It includes **no personal media, private project history, music recordings or proprietary editing assets**.
+A reusable **Codex skill + copy-paste prompt** for AI-assisted editing of your own footage. It helps select moments, arrange photos, pace the edit, mix music with scene-matched sound and check the actual export. Editing and rendering use the tools connected to your assistant.
 
-## Use it in an AI chat
+**You bring:** your travel clips and photos, preferred mood, approximate length and music choice. Tell the assistant which moments to keep or avoid.
 
-Copy [PROMPT.md](PROMPT.md) into a chat and supply your own footage or description. Nothing needs installing. A chat without editing tools can plan the film; it cannot render or verify files it cannot access.
+**You can make:** a finished travel Reel, with a cover, caption or editable project when requested and supported by your tools. Personal media and music are not included in this repository.
+
+## Start here
+
+- **Try it in a chat:** copy the [ready-to-use prompt](PROMPT.md), fill in the brief and supply your own footage. A chat without editing tools can plan the film; it cannot render or verify files it cannot access.
+- **Use it in Codex:** install the skill below, then invoke `$cinematic-memory-reel`.
+- **Want AI-generated scenes?** Use [AI Music Video Maker](https://github.com/11vinaypathak-sys/ai-music-video-maker-skill) for storyboards, generated footage and beat-synced effects.
+
+Try asking: “Turn these trip clips and photos into a 30-second Reel. Keep the mountain sunrise, use calm pacing, and show me a short preview before the full edit.”
 
 ## Install the skill
 
-Download this repository and copy the entire [skills/cinematic-memory-reel](skills/cinematic-memory-reel) folder into your assistant's supported skill directory. Keep its supporting folders together.
+Download this repository and copy the entire [skills/cinematic-memory-reel](skills/cinematic-memory-reel) folder into your assistant's supported skill directory. Keep its supporting folders together. The existing skill ID stays `cinematic-memory-reel`, so current installations and prompts keep working.
 
 For Codex, the usual user skill directory is `~/.codex/skills/`. Invoke it with:
 
@@ -42,8 +50,8 @@ Read the [design process](skills/cinematic-memory-reel/references/design-process
 Python 3.9+ is required. Install FFmpeg/ffprobe separately using the method appropriate for your system. The helpers need no Python packages, API keys, model calls or cloud uploads.
 
 ```bash
-python skills/cinematic-memory-reel/scripts/inventory_media.py ./my-footage --output ./inventory.json
-python skills/cinematic-memory-reel/scripts/verify_export.py ./my-reel.mp4 --width 1080 --height 1920 --fps 30 --require-audio --full-decode --report ./export-check.json
+python3 skills/cinematic-memory-reel/scripts/inventory_media.py ./my-footage --output ./inventory.json
+python3 skills/cinematic-memory-reel/scripts/verify_export.py ./my-reel.mp4 --width 1080 --height 1920 --fps 30 --require-audio --full-decode --report ./export-check.json
 ```
 
 The inventory uses content hashes for stable IDs and relative paths. Without ffprobe, media properties remain unknown. The export checker tests technical properties; it cannot judge storytelling, motion quality or voice-free audio. Source media is not modified. Write the inventory report outside the input directory. Existing reports require explicit `--overwrite`. Relative filenames and content hashes can still identify private material; generated reports are not automatically safe to publish.
@@ -51,7 +59,7 @@ The inventory uses content hashes for stable IDs and relative paths. Without ffp
 Run the synthetic tests with:
 
 ```bash
-python -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -v
 ```
 
 Tests generate temporary pattern footage and tones. They do not use personal media. Media-dependent tests skip when FFmpeg/ffprobe are unavailable.

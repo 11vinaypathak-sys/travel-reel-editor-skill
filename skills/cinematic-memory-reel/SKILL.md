@@ -1,9 +1,9 @@
 ---
 name: cinematic-memory-reel
-description: Create or revise cinematic memory reels from personal travel footage and photographs, including story pacing, photo composition, per-shot colour, restrained motion, music, clip-matched nature audio and verified delivery. Use for editing an actual memory film; caption-only requests do not need this workflow.
+description: Edit travel videos and photos into a cinematic Reel or memory film. Use for selecting moments, story pacing, photo layouts, colour matching, music, scene-matched nature sound and export checks, or revising an existing travel edit. Caption-only requests do not need this workflow.
 ---
 
-# Cinematic Memory Reel
+# Travel Reel Editor
 
 Build an intentional memory film from the user's captures. Preserve what makes the footage theirs. Let the brief determine whether the result is tranquil, playful, documentary or punchy; this is not a preset look.
 
